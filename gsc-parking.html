@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS CLOUD LTD. | web v přípravě</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0088cc;
+            --bg-color: #0f172a;
+            --bg-gradient: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(30, 41, 59, 0.8) 50%, var(--bg-color) 70%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        h1 span {
+            color: var(--primary-color);
+        }
+
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 3px;
+            margin-bottom: 2rem;
+        }
+
+        .logo-container {
+            margin: 0 auto 3rem auto;
+            width: 160px;
+            height: 160px;
+            filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.4));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .message {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #cbd5e1;
+            margin-bottom: 3.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            letter-spacing: 1.5px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .contact-value a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .contact-value a:hover {
+            color: var(--primary-color);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 2rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .subtitle { font-size: 1rem; }
+            .logo-container { width: 120px; height: 120px; margin-bottom: 2rem; }
+            .contact-info { flex-direction: column; gap: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <h1>GS <span>CLOUD</span> <span class="subtitle">LTD.</span></h1>
+        
+        <div class="logo-container">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Vnější horní modrá -->
+                <polygon points="20,54 100,8 180,54 140,77 100,54 60,77" fill="#0088cc" />
+                <!-- Vnější pravá černá -->
+                <polygon points="180,54 180,146 100,192 100,146 140,123 140,77" fill="#000000" />
+                <!-- Vnější levá tmavě šedá -->
+                <polygon points="20,54 60,77 60,123 100,146 100,192 20,146" fill="#2b2b2b" />
+                <!-- Vnitřní horní bílá -->
+                <polygon points="100,54 140,77 100,100 60,77" fill="#ffffff" />
+                <!-- Vnitřní levá světle šedá -->
+                <polygon points="60,77 100,100 100,146 60,123" fill="#b3b3b3" />
+                <!-- Vnitřní pravá světle modrá -->
+                <polygon points="100,100 140,77 140,123 100,146" fill="#0088cc" />
+            </svg>
+        </div>
+
+        <p class="message">
+            Tato webová prezentace se právě připravuje.<br>
+            Brzy vám zde představíme nový obsah služby v plném rozsahu.
+        </p>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <span class="contact-label">E-mail</span>
+                <span class="contact-value"><a href="mailto:info@gscloud.com">info@gscloud.cz</a></span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">Telefon</span>
+                <span class="contact-value"><a href="tel:+420607839455">+420 607 839 455</a></span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 GS CLOUD LTD. Všechna práva vyhrazena.
+    </footer>
+
+</body>
+</html>
